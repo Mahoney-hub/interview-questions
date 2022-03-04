@@ -2,18 +2,18 @@ import React, {useState} from 'react';
 import {Row, Col, Button, Divider, Card} from 'antd';
 import {questions} from './questions';
 
+type RenderQuestionType = {
+    id: number
+    question: string
+    answer: string
+}
+
 const App = () => {
 
     const renderQuestion = () => {
         const min = 0;
         const max = questions.length - 1;
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    type RenderQuestionType = {
-        id: number
-        question: string
-        answer: string
     }
 
     const [text, setText] = useState<string>('none')
