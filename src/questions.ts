@@ -1,4 +1,20 @@
-export const questions = [
+export const questionsCSS = [
+    {
+        id: 1,
+        question: 'Что такое CSS',
+        answer: 'CSS - каскадные таблицы стили. Нужны для стилизации интерфейса'
+    }
+]
+
+export const questionsJS = [
+    {
+        id: 1,
+        question: 'Для чего нужен JS',
+        answer: 'JavaScript используется для того, чтобы делать страницы интерактивными, то есть дать пользователю возможность взаимодействовать с элементами. Когда страницы могут реагировать на какие-то действия, это делает их интереснее.'
+    }
+]
+
+export const questionsReact = [
     {
         id: 1,
         question: 'Отличие React от Angular',
