@@ -1,7 +1,7 @@
 export type QuestionType = {
-    id: number
+    id: string
     question: string
     answer: string
 }
 
-export type TopicOfQuestionsType = 'css' | 'js' | 'react'
+export type TopicOfQuestionsType = 'css' | 'js' | 'react' | 'other'

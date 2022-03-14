@@ -9,7 +9,7 @@ const App = () => {
     const [topic, setTopic] = useState<TopicOfQuestionsType>('react')
     const [answer, setAnswer] = useState<boolean>(false)
     const [currentQuestion, setCurrentQuestion] = useState<QuestionType>(renderQuestion(topic))
-
+    // Functions
     const showAnswerHandler = () => {
         setAnswer(!answer)
     }
@@ -19,15 +19,22 @@ const App = () => {
         setCurrentQuestion(renderQuestion(topic))
     }
 
+    const changeTopicHandler = (value: TopicOfQuestionsType) => {
+        setAnswer(false)
+        setTopic(value)
+        setCurrentQuestion(renderQuestion(value))
+    }
+
     return (
         <div>
             <Layout>
                 <Header style={{position: 'fixed', zIndex: 1, width: '100%'}}>
                     <div className="logo"/>
-                    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                        <Menu.Item key="1">CSS</Menu.Item>
-                        <Menu.Item key="2">JS</Menu.Item>
-                        <Menu.Item key="3">React</Menu.Item>
+                    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['3']}>
+                        <Menu.Item key="1" onClick={() => changeTopicHandler('css')}>CSS</Menu.Item>
+                        <Menu.Item key="2" onClick={() => changeTopicHandler('js')}>JS</Menu.Item>
+                        <Menu.Item key="3" onClick={() => changeTopicHandler('react')}>React</Menu.Item>
+                        <Menu.Item key="4" onClick={() => changeTopicHandler('other')}>Other</Menu.Item>
                     </Menu>
                 </Header>
                 <Content className="site-layout" style={{padding: '0 50px', marginTop: 64, height: '87vh'}}>

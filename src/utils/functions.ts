@@ -1,5 +1,8 @@
 import {TopicOfQuestionsType} from '../types/types';
-import {questionsCSS, questionsJS, questionsReact} from '../questions';
+import {questionsOther} from '../data/questionsOther';
+import {questionsReact} from '../data/questionsReact';
+import {questionsJS} from '../data/questionsJS';
+import {questionsCSS} from '../data/questionsCSS';
 
 export const renderQuestion = (value: TopicOfQuestionsType) => {
     let questions = []
@@ -12,6 +15,9 @@ export const renderQuestion = (value: TopicOfQuestionsType) => {
             break
         case 'react':
             questions = questionsReact
+            break
+        case 'other':
+            questions = questionsOther
             break
     }
     const min = 0;
