@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Card, Col, Layout, Menu, Row} from 'antd';
+import {Button, Card, Layout, Menu, Row} from 'antd';
 import {QuestionType, TopicOfQuestionsType} from './types/types';
 import {renderQuestion} from './utils/functions';
 
@@ -37,15 +37,14 @@ const App = () => {
                         <Menu.Item key="4" onClick={() => changeTopicHandler('other')}>Other</Menu.Item>
                     </Menu>
                 </Header>
-                <Content className="site-layout" style={{padding: '0 50px', marginTop: 64, height: '87vh'}}>
+                <Content className="site-layout" style={{padding: '0 50px', marginTop: 70, height: '85vh'}}>
                     <Row justify={'center'} style={{marginTop: 30}}>
-                        <Col span={10}>
-                            <Card style={{width: 800}}
+                            <Card style={{width: 1000}}
                                   hoverable
                                   title={currentQuestion.question}
                                   bordered={false}
                             >
-                                {answer && <p style={{fontSize: '20px'}}>{currentQuestion.answer}</p>}
+                                {answer && <pre style={{fontSize: '20px'}}>{currentQuestion.answer}</pre>}
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <Button type="primary" onClick={showAnswerHandler}>
                                         Показать ответ
@@ -55,7 +54,6 @@ const App = () => {
                                     </Button>
                                 </div>
                             </Card>
-                        </Col>
                     </Row>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>
