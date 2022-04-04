@@ -34,7 +34,8 @@ const App = () => {
                         <Menu.Item key="1" onClick={() => changeTopicHandler('css')}>CSS</Menu.Item>
                         <Menu.Item key="2" onClick={() => changeTopicHandler('js')}>JS</Menu.Item>
                         <Menu.Item key="3" onClick={() => changeTopicHandler('react')}>React</Menu.Item>
-                        <Menu.Item key="4" onClick={() => changeTopicHandler('other')}>Other</Menu.Item>
+                        <Menu.Item key="4" onClick={() => changeTopicHandler('redux')}>Redux</Menu.Item>
+                        <Menu.Item key="5" onClick={() => changeTopicHandler('general')}>General</Menu.Item>
                     </Menu>
                 </Header>
                 <Content className="site-layout" style={{padding: '0 50px', marginTop: 70, height: '85vh'}}>
@@ -44,7 +45,7 @@ const App = () => {
                                   title={currentQuestion.question}
                                   bordered={false}
                             >
-                                {answer && <pre style={{fontSize: '20px'}}>{currentQuestion.answer}</pre>}
+                                {answer && <p style={{fontSize: '20px'}}>{currentQuestion.answer}</p>}
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <Button type="primary" onClick={showAnswerHandler}>
                                         Показать ответ

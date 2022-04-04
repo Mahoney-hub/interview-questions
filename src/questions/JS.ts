@@ -1,6 +1,6 @@
 import {v1} from 'uuid';
 
-export const questionsJS = [
+export const JS = [
     {
         id: v1(),
         question: 'Для чего нужен JS',

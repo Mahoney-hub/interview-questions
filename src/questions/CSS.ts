@@ -1,6 +1,6 @@
 import {v1} from 'uuid';
 
-export const questionsCSS = [
+export const CSS = [
     {
         id: v1(),
         question: 'Что такое CSS',
@@ -277,7 +277,7 @@ export const questionsCSS = [
     },
     {
         id: v1(),
-        question: 'Для чего рекомендуется использовать атрибуты data?',
+        question: 'Для чего рекомендуется использовать атрибуты questions?',
         answer: 'CSS - каскадные таблицы стили. Нужны для стилизации интерфейса'
     },
     {

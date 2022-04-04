@@ -4,4 +4,4 @@ export type QuestionType = {
     answer: string
 }
 
-export type TopicOfQuestionsType = 'css' | 'js' | 'react' | 'other'
+export type TopicOfQuestionsType = 'css' | 'js' | 'react' | 'general' | 'redux'

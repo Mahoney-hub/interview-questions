@@ -1,23 +1,27 @@
 import {TopicOfQuestionsType} from '../types/types';
-import {questionsOther} from '../data/questionsOther';
-import {questionsReact} from '../data/questionsReact';
-import {questionsJS} from '../data/questionsJS';
-import {questionsCSS} from '../data/questionsCSS';
+import {general} from '../questions/general';
+import {REACT} from '../questions/REACT';
+import {JS} from '../questions/JS';
+import {CSS} from '../questions/CSS';
+import {REDUX} from '../questions/REDUX';
 
 export const renderQuestion = (value: TopicOfQuestionsType) => {
     let questions = []
     switch (value) {
         case 'css':
-            questions = questionsCSS
+            questions = CSS
             break
         case 'js':
-            questions = questionsJS
+            questions = JS
             break
         case 'react':
-            questions = questionsReact
+            questions = REACT
             break
-        case 'other':
-            questions = questionsOther
+        case 'redux':
+            questions = REDUX
+            break
+        case 'general':
+            questions = general
             break
     }
     const min = 0;

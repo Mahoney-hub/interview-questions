@@ -1,6 +1,6 @@
 import {v1} from 'uuid';
 
-export const questionsOther = [
+export const general = [
     {
         id: v1(),
         question: 'HTTP?',
@@ -45,5 +45,20 @@ export const questionsOther = [
         id: v1(),
         question: 'Что такое NodeJS?',
         answer: 'NodeJS- это программа, которая находится на сервере (вместо браузера) и в нем работает JS. Браузер и NodeJS используют один и тот же движок v8-поэтому обоих воспринимает JS.'
+    },
+    {
+        id: v1(),
+        question: 'Что такое DRY?',
+        answer: 'DRY – Don’t repeat yourself – принцип призывает Вас не повторяться при написании кода. Все что Вы пишите в проекте, должно быть определено только один раз.'
+    },
+    {
+        id: v1(),
+        question: 'Что такое KISS?',
+        answer: 'KISS – keep it short simple – делайте вещи проще. Порой наиболее правильное решение – это наиболее простая реализация задачи, в которой нет ничего лишнего.'
+    },
+    {
+        id: v1(),
+        question: 'Что такое YAGNI?',
+        answer: 'You ain’t gonna need it – вам это не понадобится. Все что не предусмотрено техническим заданием проекта, не должно быть в нем.'
     },
 ]
